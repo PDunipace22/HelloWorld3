@@ -12,18 +12,18 @@ namespace HelloWorld3
         {
             ////Part one greeting statement
             //string messageOne = "Hello World!";
-            //string messageTwo = "I am Spartacus";
+            string messageTwo = "I am Spartacus";
 
 
             ////Part two set initial Spartacus attributes
-            //int ageOne = 35;
-            //int ageTwo = 45;
+            int ageOne = 35;
+            int ageTwo = 45;
             //int ageThree = 80;
             //double heightOne = 72.50;
             //double heightTwo = 91.45;
             //float weightOne = 210.0284606f;
             //float weightTwo = 331.12345678f;
-            // isGodLikeOne = true;
+            bool isGodLikeOne = true;
             //bool isGodLikeTwo = false;
             //char genderMale = 'M';
             //char genderFemale = 'f';
@@ -275,6 +275,45 @@ namespace HelloWorld3
             //Console.ReadLine();
 
             //Part nineteen method calls
+            ageOne = 34;
+            bool isGodLike = true; // I am not showing all the code.
+            isGodLikeOne = IsGodLike(ageOne);
+            Console.WriteLine("To say our hero is God like is " + isGodLikeOne);
+            Console.WriteLine(Reverse(messageTwo));
+        }
+        static bool IsGodLike(int age)
+        {
+            bool status;
+            if (age % 2 == 0)
+            {
+                status = false;
+            }
+            else
+            {
+                status = true;
+            }
+            return status;
+        }
+        static string Reverse(string text)
+        {
+            char[] cArray = text.ToCharArray();
+            string reverse = " ";
+            for (int i = cArray.Length - 1; i > -1; i--)
+            {
+                reverse += cArray[i];
+            }
+            return reverse;
+        }
+        static int[] Reverse(string text)
+        {
+            char[] cArray = text.ToCharArray();
+            string reverse = " ";
+            for (int i = cArray.Length - 1; i > -1; i--)
+            {
+                reverse += cArray[i];
+            }
+            return reverse;
         }
     }
 }
+
